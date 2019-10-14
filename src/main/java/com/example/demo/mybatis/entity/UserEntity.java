@@ -1,6 +1,8 @@
 package com.example.demo.mybatis.entity;
-
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -14,8 +16,10 @@ import java.io.Serializable;
 @TableName("t_user")
 public class UserEntity implements Serializable {
 
-    private Integer id;
+    @TableId(type = IdType.ID_WORKER)
+    private Long id;
 
+    @TableField(value = "user_name")
     private String userName;
 
     private String password;

@@ -10,4 +10,6 @@ import com.example.demo.mybatis.entity.UserEntity;
 public interface UserService {
 
     UserEntity selectUser(String name);
+
+    void addUser(UserEntity userEntity);
 }

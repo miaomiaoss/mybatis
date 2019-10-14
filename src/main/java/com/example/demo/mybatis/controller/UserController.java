@@ -28,4 +28,9 @@ public class UserController {
         return userService.selectUser(name);
     }
 
+    @PostMapping("/add")
+    public void addUser(UserEntity userEntity){
+        log.info("添加的员工为:{}",userEntity);
+        userService.addUser(userEntity);
+    }
 }
